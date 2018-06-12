@@ -1,0 +1,13 @@
+{
+    success: true,
+    data: {
+        fname: "Armando",
+        lname: "Toledo",
+        email: "toledoal@vcu.edu",
+        apodo: "Mandy",
+        edad: 28,
+        bday: "12-20-1989",
+        gender: 1,
+        lang: ["3", "4", "5"]
+    }
+}

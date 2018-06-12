@@ -1,0 +1,12 @@
+{
+    success: true,
+    errors: {
+        email: "That email ain't no good amigo",
+        bday: "no way you dat young",
+        gender: "I think you are a male, correct this"
+    },
+    data: {
+        exito: "si"
+    },
+    msg: "EXITO ROTUNDO"
+}
