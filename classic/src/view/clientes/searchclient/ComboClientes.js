@@ -8,6 +8,7 @@ Ext.define('app.view.clientes.searchclient.ComboClientes', {
     displayField: 'fname',
     valueField: 'eid',
     pageSize: 25,
+    hideTrigger: true,
     initComponent: function() {
         Ext.apply(this, {
             store: Ext.create('app.store.clientes.StoreClientes')

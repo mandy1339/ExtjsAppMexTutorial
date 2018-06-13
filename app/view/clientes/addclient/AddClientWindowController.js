@@ -2,6 +2,7 @@ Ext.define('app.view.clientes.addclient.AddClientWindowController',{
     extend: 'Ext.app.ViewController',
     alias: 'controller.addclientwindowcontroller',
 
+    // ADD CLIENT (AJAX)
     addClientHandler: function() {
         var formulario = this.lookupReference('add-client-form');
         var formValues = formulario.getValues();
@@ -23,6 +24,7 @@ Ext.define('app.view.clientes.addclient.AddClientWindowController',{
         })
     },
 
+    // ADD CLIENT (FORM)
     addClientHandler2: function() {
         var formulario = this.lookupReference('add-client-form').getForm();
         formulario.submit({
@@ -51,12 +53,11 @@ Ext.define('app.view.clientes.addclient.AddClientWindowController',{
     },
 
 
-
+    // LOAD CLIENT (FORM)
     loadFormHandler: function() {
         var formulario = this.lookupReference('add-client-form').getForm();
         formulario.load({
             url: '/server/client/loadclient.json',
-            params: {eid: 13},
             failure: function(form, action) {
                 Ext.Msg.alert("Load Failed", action);
             }

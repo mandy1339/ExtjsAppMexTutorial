@@ -1,15 +1,7 @@
 Ext.define('app.store.clientes.StoreClientes', {
     extend: 'Ext.data.Store',
 
-    fields: [{name: "eid", type: "int"},
-        "fname",
-        "lname",
-        "email",
-        "apodo",
-        {name: "edad", type: "int"},
-        {name: "bday", type: "date", format: "m-d-Y"},
-        {name: "gender", type: "int"},
-        "lang"],
+    model: 'app.model.clientes.ClienteModel',
 
     proxy: {
         type: 'ajax',
@@ -17,7 +9,8 @@ Ext.define('app.store.clientes.StoreClientes', {
 
         reader: {
             type: 'json', 
-            rootProperty: 'data'
+            rootProperty: 'data',
+            totalProperty: 'numFilas'
         }
     }
 });

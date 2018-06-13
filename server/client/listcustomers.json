@@ -1,35 +1,35 @@
 {
-    numFilas: 9,
-    success: true,
-    data: [{
-        eid: 1,
-        fname: "Armando",
-        lname: "Toledo",
-        email: "toledoal@vcu.edu",
-        apodo: "Mandy",
-        edad: 28,
-        bday: "12-20-1989",
-        gender: 1,
-        lang: ["3", "4", "5"]
+    "numFilas": 9,
+    "success": true,
+    "data": [{
+        "eid": 1,
+        "fname": "Armando",
+        "lname": "Toledo",
+        "email": "toledoal@vcu.edu",
+        "apodo": "Mandy",
+        "edad": 28,
+        "bday": "December 20, 1989",
+        "gender": 1,
+        "lang": ["3", "4", "5"]
     }, {
-        eid: 2,
-        fname: "Karol",
-        lname: "Toledo",
-        email: "karol.alejandra5@hotmail.com",
-        apodo: "Ale",
-        edad: 24,
-        bday: "12-05-1993",
-        gender: 2,
-        lang: ["4", "5"]
+        "eid": 2,
+        "fname": "Karol",
+        "lname": "Toledo",
+        "email": "karol.alejandra5@hotmail.com",
+        "apodo": "Ale",
+        "edad": 24,
+        "bday": "December 05, 1993",
+        "gender": 2,
+        "lang": ["4", "5"]
     }, {
-        eid: 3,
-        fname: "Ileana",
-        lname: "Lugo",
-        email: "nagini.alejandra5@hotmail.com",
-        apodo: "Nagini",
-        edad: 60,
-        bday: "05-28-1960",
-        gender: 2,
-        lang: ["1", "4", "5"]
+        "eid": 3,
+        "fname": "Ileana",
+        "lname": "Lugo",
+        "email": "nagini.alejandra5@hotmail.com",
+        "apodo": "Nagini",
+        "edad": 60,
+        "bday": "May 28, 1960",
+        "gender": 2,
+        "lang": ["1", "4", "5"]
     }]
 }

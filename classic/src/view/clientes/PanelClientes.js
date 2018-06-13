@@ -16,7 +16,7 @@ Ext.define('app.view.clientes.PanelClientes', {
         handler: 'showAddClientHandler'
     },'->',{
         xtype: 'comboclientes',
-        emptyText: 'im not a button',
+        emptyText: 'clients',
         width: 300
     }],
     //--------
@@ -32,8 +32,7 @@ Ext.define('app.view.clientes.PanelClientes', {
         reference: 'client-tab-panel',
         layout: 'fit',
         items: [{                           // TABS
-            xtype: 'panel',                     // TAB 1
-            html: 'content',
+            xtype: 'gridclientes',              // TAB 1
             title: 'tab 1',
         }, {
             xtype: 'panel',                     // TAB 2
