@@ -8,12 +8,42 @@ Ext.define('app.view.main.MainController', {
     alias: 'controller.main',
 
     onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+        var panel = Ext.create('app.view.clientes.PanelClientes');
+        
+        var win = Ext.create('Ext.window.Window', {
+            width: 800,
+            height: 700,
+            title: 'Seleccionar Cliente',
+            layout: 'fit',
+            items: panel,
+            
+            buttons: [{
+                text: 'Select',
+                scope: this,
+                handler: function() {
+                    panel.seleccionar();
+                }
+            }, {
+                text: 'Cancel',
+                scope: this,
+                handler: function() {
+                    win.hide();
+                }
+            }]
+        });
+
+
+
+        panel.on({
+            selectcliente: function(panelclientes, rec) {
+                win.hide();
+                Ext.Msg.confirm('Cliente ' + rec.data.fname, 'Cliente selected: ' + rec.data.fname, 'onConfirm', this);
+                // onConfirm function is in PanelClientes because "this" scope here refers to that panel
+            },
+            
+        });
+
+        win.show();
     },
 
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
-    }
 });

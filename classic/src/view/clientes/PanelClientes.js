@@ -3,7 +3,6 @@ Ext.define('app.view.clientes.PanelClientes', {
     layout: 'border',
     xtype: 'panelclientes',
     controller: 'panelclientescontroller',
-    model: 'panelclientesmodel',
 
 
 
@@ -34,6 +33,10 @@ Ext.define('app.view.clientes.PanelClientes', {
         items: [{                           // TABS
             xtype: 'gridclientes',              // TAB 1
             title: 'tab 1',
+            reference: 'gridlistado',
+            listeners: {
+                itemClick: 'showClienteDetalle'
+            }
         }, {
             xtype: 'panel',                     // TAB 2
             html: 'content2',
@@ -50,8 +53,11 @@ Ext.define('app.view.clientes.PanelClientes', {
     {
         height: 100, //px
         region: 'south',
-        html: 'border sur',
-        bodyStyle: 'background-color: yellow; color: black'
+        reference: 'southregionpanel',
+        bodyStyle: 'background-color: yellow; color: black',
+        tpl: '<h1>{fname} {lname}</h1>'+
+            '<br>' +
+            '{apodo}' + ' age: {edad}'
     }],
     //-------------
     // SOUTH REGION
@@ -80,4 +86,18 @@ Ext.define('app.view.clientes.PanelClientes', {
     //------------
     // BOTTOM  BAR
     
+
+
+    seleccionar: function() {
+        var me = this;
+        var rec = this.lookupReference('gridlistado').getSelectionModel().getSelection();
+        this.fireEvent('selectcliente', this, rec[0]);
+    },
+
+    onConfirm: function (choice) {
+        if (choice === 'yes') {
+            //
+            Ext.Msg.alert('WOOOO');
+        }
+    },
 });

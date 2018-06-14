@@ -30,7 +30,6 @@ Ext.define('app.view.clientes.PanelClientesController', {
     },
 
     addNewTabHandler: function() {
-
         var tabName = this.lookupReference('name-of-tab-field').getValue();
         // var num = Ext.id();
         var tempPanel = Ext.create('Ext.Panel', {
@@ -52,6 +51,15 @@ Ext.define('app.view.clientes.PanelClientesController', {
             }]
         })
         this.lookupReference('client-tab-panel').add(tempPanel);   
+    },
 
-    }
+    showClienteDetalle: function(grid, rec) {
+        console.info(rec);
+        console.log('NAME:');
+        console.log(rec.data.apodo);
+
+        var panel = this.lookupReference('southregionpanel');
+        panel.update(rec.data);
+    },
+
 });
